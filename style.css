@@ -1,0 +1,157 @@
+/* Базовые переменные и сброс */
+:root {
+    --bg-deep-black: #0A0A0A;
+    --bg-charcoal: #1A1A1A;
+    --accent-neon: #00E5FF;
+    --text-white: #FFFFFF;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: var(--bg-deep-black);
+    color: var(--text-white);
+}
+
+/* [ HEADER / НАВИГАЦИЯ ] */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+header .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header .logo:hover {
+    color: var(--text-white);
+    text-shadow: 0 0 15px var(--accent-neon);
+}
+
+header nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--accent-neon);
+}
+
+.btn-outline {
+    border: 1px solid silver;
+    background: transparent;
+    color: var(--text-white);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 10px var(--accent-neon);
+}
+
+/* [ HERO SECTION / ГЛАВНЫЙ ЭКРАН ] */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.9)), url('./img/blackcar.jpg') center/cover;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #CCCCCC;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: #fff;                       
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6), 
+                0 0 40px rgba(0, 229, 255, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+/* [ SERVICES GRID / НАШИ УСЛУГИ ] */
+.services {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: linear-gradient(145deg, #0d0d0d, #030303);
+    padding: 40px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    border-color: rgba(0, 229, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(0, 229, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #999999;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
