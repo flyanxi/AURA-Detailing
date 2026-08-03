@@ -14,7 +14,7 @@ body, html {
     color: var(--text-white);
 }
 
-/* [ HEADER / НАВИГАЦИЯ ] */
+/* HEADER / НАВИГАЦИЯ */
 header {
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,7 @@ header nav a:hover {
     box-shadow: 0 0 10px var(--accent-neon);
 }
 
-/* [ HERO SECTION / ГЛАВНЫЙ ЭКРАН ] */
+/* HERO SECTION / ГЛАВНЫЙ ЭКРАН */
 .hero {
     height: 100vh;
     display: flex;
@@ -112,7 +112,7 @@ header nav a:hover {
     transform: translateY(-2px);
 }
 
-/* [ SERVICES GRID / НАШИ УСЛУГИ ] */
+/* SERVICES GRID / НАШИ УСЛУГИ */
 .services {
     padding: 100px 50px;
     text-align: center;
@@ -154,4 +154,200 @@ header nav a:hover {
     color: #999999;
     line-height: 1.6;
     font-size: 0.95rem;
+}
+
+/* МОДАЛЬНОЕ ОКНО И ФОРМА */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #0d0d0d, #030303);
+    padding: 40px 30px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(0, 229, 255, 0.1);
+    text-align: center;
+    transform: translateY(-30px);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-content h2 {
+    color: var(--text-white);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.modal-content p {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.close-btn {
+    color: #666;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--accent-neon);
+}
+
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #111;
+    border: 1px solid #333;
+    color: var(--text-white);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    outline: none;
+    border-color: var(--accent-neon);
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+#bookingForm input::placeholder {
+    color: #555;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #030303;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 80px 50px 30px;
+    margin-top: 100px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-col h3 {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.brand-col h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-white);
+}
+
+.brand-col p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--accent-neon);
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+    transform: translateY(-4px) scale(1.1);
+}
+
+.footer-links,
+.footer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-info li {
+    margin-bottom: 15px;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.footer-links a,
+.footer-info a {
+    color: #888;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover,
+.footer-info a:hover {
+    color: var(--accent-neon);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.footer-bottom p {
+    color: #555;
+    font-size: 0.85rem;
+    margin: 0;
 }
