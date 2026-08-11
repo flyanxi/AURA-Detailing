@@ -3,49 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>AURA Detailing | Auto Perfection</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AURA Detailing | Auto Perfection in Tallinn</title>
+    <meta name="description" content="Ceramic coating, paint correction, PPF and full detailing for cars in Tallinn, Estonia. Book a free quote with AURA Detailing.">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header>
-        <a href="#" class="logo">AURA Detailing</a>
-        <nav>
-            <a href="#services"><strong>Services</strong></a>
-            <a href="#portfolio"><strong>Portfolio</strong></a>
-            <a href="#about"><strong>About</strong></a>
-            <a href="#faq"><strong>FAQ</strong></a>
+        <a href="#" class="logo">AURA<span>DETAILING</span></a>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primaryNav">
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
         </nav>
         <button class="btn-outline open-modal-btn">Book Now</button>
     </header>
 
-    <section class="hero">
-        <h1>MASTERING THE ART OF AUTO PERFECTION</h1>
-        <p>Ceramic Coating, Paint Correction, PPF & Restoration in Europe</p>
-        <button class="btn-primary open-modal-btn">GET A FREE QUOTE</button>
-    </section>
+    <main id="main">
 
-    <section id="services" class="services">
-        <h2>Our Precision Services</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>🛡 Ceramic Coating</h3>
-                <p>Advanced nanoceramic protection locking in extreme gloss and repelling elements.</p>
-            </div>
-            <div class="card">
-                <h3>🖌 Paint Correction</h3>
-                <p>Multi-stage polishing to eliminate swirls, scratches, and imperfections.</p>
-            </div>
-            <div class="card">
-                <h3>✩ Full Detailing</h3>
-                <p>Comprehensive interior and exterior rejuvenation for absolute perfection.</p>
-            </div>
-        </div>
-    </section>
+        <section class="hero">
+            <p class="eyebrow">Tallinn, Estonia</p>
+            <h1>Mastering the<br>Art of Auto <span class="gloss">Perfection</span></h1>
+            <p>Ceramic coating, paint correction, PPF &amp; restoration &mdash; finished to a mirror.</p>
+            <button class="btn-primary open-modal-btn">Get a Free Quote</button>
+        </section>
 
-<!-- FOOTER -->
+        <section id="services" class="services">
+            <p class="eyebrow center">What We Do</p>
+            <h2>Precision Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-shield-halved card-icon" aria-hidden="true"></i>
+                    <h3>Ceramic Coating</h3>
+                    <p>Advanced nano-ceramic protection that locks in extreme gloss and repels dirt, water and UV damage for years.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-paintbrush card-icon" aria-hidden="true"></i>
+                    <h3>Paint Correction</h3>
+                    <p>Multi-stage machine polishing removes swirls, scratches and oxidation, restoring true factory depth to the paint.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-car-side card-icon" aria-hidden="true"></i>
+                    <h3>Full Detailing</h3>
+                    <p>Complete interior and exterior rejuvenation, from steam-cleaned upholstery to a hand-finished exterior.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-layer-group card-icon" aria-hidden="true"></i>
+                    <h3>PPF Installation</h3>
+                    <p>Self-healing paint protection film shields high-impact panels from stone chips, scuffs and road grime.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <p class="eyebrow center">Results</p>
+            <h2>Before &amp; After</h2>
+            <p class="section-lede">Hover a panel to see the correction. Swap in your own project photos any time &mdash; see the note in the code comments below.</p>
+
+            <div class="reveal-grid">
+                <div class="reveal-card" tabindex="0">
+                    <div class="reveal-card__before"></div>
+                    <div class="reveal-card__after"></div>
+                    <span class="reveal-tag reveal-tag--before">Before</span>
+                    <span class="reveal-tag reveal-tag--after">After</span>
+                    <p class="reveal-caption">Paint Correction &mdash; Hood &amp; Fenders</p>
+                </div>
+                <div class="reveal-card" tabindex="0">
+                    <div class="reveal-card__before"></div>
+                    <div class="reveal-card__after alt"></div>
+                    <span class="reveal-tag reveal-tag--before">Before</span>
+                    <span class="reveal-tag reveal-tag--after">After</span>
+                    <p class="reveal-caption">Ceramic Coating &mdash; Full Exterior</p>
+                </div>
+                <div class="reveal-card" tabindex="0">
+                    <div class="reveal-card__before alt"></div>
+                    <div class="reveal-card__after"></div>
+                    <span class="reveal-tag reveal-tag--before">Before</span>
+                    <span class="reveal-tag reveal-tag--after">After</span>
+                    <p class="reveal-caption">PPF &mdash; Front End Package</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-inner">
+                <div class="about-text">
+                    <p class="eyebrow">Our Story</p>
+                    <h2>Built by People Who Obsess Over Paint</h2>
+                    <p>AURA Detailing started as a two-bay garage on the edge of Tallinn and grew on referrals alone. Every car that leaves the shop is inspected under raking light before it's handed back &mdash; if we wouldn't put our name on it, it doesn't go out the door.</p>
+                    <p>We work on daily drivers, weekend cars and pre-sale detailing alike, with the same multi-stage process every time.</p>
+                    <div class="about-stats">
+                        <div><strong>500+</strong><span>Cars Detailed</span></div>
+                        <div><strong>7 yrs</strong><span>In Business</span></div>
+                        <div><strong>4.9★</strong><span>Average Rating</span></div>
+                    </div>
+                </div>
+                <div class="about-visual" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <p class="eyebrow center">Good to Know</p>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary>How long does ceramic coating last?</summary>
+                    <p>A professionally applied coating typically lasts 2&ndash;5 years depending on the product tier and how the car is maintained, with routine washing extending its lifespan.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How long should I book off for a full detail?</summary>
+                    <p>Full interior and exterior detailing usually takes 4&ndash;8 hours. Paint correction and coating packages run 1&ndash;3 days depending on the vehicle's condition.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you work on leased or pre-sale vehicles?</summary>
+                    <p>Yes &mdash; paint correction and detailing are popular ahead of lease returns or private sales, and can noticeably improve resale value and photos.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need to bring my car in, or do you travel?</summary>
+                    <p>Most work is done in our Tallinn bay for quality control, but mobile visits are available for full detailing packages within the city &mdash; ask when you book.</p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-col brand-col">
@@ -57,7 +149,7 @@
                     <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-col">
                 <h3>Services</h3>
                 <ul class="footer-links">
@@ -80,52 +172,47 @@
             <div class="footer-col">
                 <h3>Working Hours</h3>
                 <ul class="footer-info">
-                    <li>Mon - Fri: 09:00 - 19:00</li>
-                    <li>Saturday: 10:00 - 16:00</li>
+                    <li>Mon &ndash; Fri: 09:00 &ndash; 19:00</li>
+                    <li>Saturday: 10:00 &ndash; 16:00</li>
                     <li>Sunday: Closed</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2026 AURA Detailing. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT ДЛЯ МОДАЛЬНОГО ОКНА -->
-    <script>
-        const modal = document.getElementById('bookingModal');
-        const openBtns = document.querySelectorAll('.open-modal-btn');
-        const closeBtn = document.querySelector('.close-btn');
+    <!-- BOOKING MODAL -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <span class="close-btn" id="closeModalBtn" role="button" tabindex="0" aria-label="Close booking form">&times;</span>
+            <h2 id="modalTitle">Book Your Detail</h2>
+            <p>Tell us about your car and we'll confirm a slot within one business day.</p>
 
-        openBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                modal.classList.add('show');
-            });
-        });
+            <form id="bookingForm">
+                <label class="visually-hidden" for="bookingName">Your Name</label>
+                <input type="text" id="bookingName" placeholder="Your Name" autocomplete="name" required>
 
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('show');
-        });
+                <label class="visually-hidden" for="bookingPhone">Phone Number</label>
+                <input type="tel" id="bookingPhone" placeholder="Phone Number" autocomplete="tel" required>
 
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('show');
-            }
-        });
+                <label class="visually-hidden" for="bookingService">Service</label>
+                <select id="bookingService" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="ceramic">Ceramic Coating</option>
+                    <option value="correction">Paint Correction</option>
+                    <option value="detailing">Full Detailing</option>
+                    <option value="ppf">PPF Installation</option>
+                </select>
 
-        // ВАЛИДАЦИЯ ФОРМЫ (ОГРАНИЧЕНИЕ ВВОДА)
-    
-        const nameInput = document.querySelector('input[placeholder="Your Name"]');
-        const phoneInput = document.querySelector('input[placeholder="Phone Number"]');
+                <button type="submit" class="btn-primary full-width">Request Booking</button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
 
-        nameInput.addEventListener('input', function() {
-            this.value = this.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, '');
-        });
-
-        phoneInput.addEventListener('input', function() {
-            this.value = this.value.replace(/[^0-9+]/g, '');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
