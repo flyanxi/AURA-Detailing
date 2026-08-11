@@ -270,6 +270,19 @@ header nav a:hover { color: var(--accent-neon); }
     clip-path: inset(0 100% 0 0);
 }
 
+/* Real photo pair — scoped to the first portfolio card only, so it doesn't
+   leak into the other placeholder cards that share the same base classes. */
+.reveal-grid > .reveal-card:nth-child(1) .reveal-card__before {
+    background-image: url('img/before1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.reveal-grid > .reveal-card:nth-child(1) .reveal-card__after {
+    background-image: url('img/after1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .reveal-card:hover .reveal-card__after,
 .reveal-card:focus .reveal-card__after,
 .reveal-card:focus-within .reveal-card__after {
@@ -328,10 +341,9 @@ header nav a:hover { color: var(--accent-neon); }
 .about-visual {
     aspect-ratio: 1;
     border-radius: var(--radius);
-    background:
-        repeating-linear-gradient(45deg, rgba(0,229,255,0.06) 0 2px, transparent 2px 14px),
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), transparent 55%),
-        linear-gradient(160deg, #161616, #030303);
+    background-image: url('img/det.jpg');
+    background-size: cover;
+    background-position: center;
     border: 1px solid var(--border-hairline);
 }
 
