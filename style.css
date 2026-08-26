@@ -82,18 +82,31 @@ header .logo {
     color: var(--text-white);
     text-decoration: none;
     transition: text-shadow 0.3s ease;
+    z-index: 101;
 }
 header .logo span { color: var(--accent-neon); margin-left: 6px; font-weight: 500; }
 header .logo:hover { text-shadow: 0 0 15px var(--accent-neon); }
 
-header nav a {
+.nav-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+#primaryNav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#primaryNav a {
     color: var(--text-white);
     text-decoration: none;
     margin: 0 15px;
     font-size: 0.9rem;
     transition: color 0.3s;
 }
-header nav a:hover { color: var(--accent-neon); }
+#primaryNav a:hover { color: var(--accent-neon); }
 
 .btn-outline {
     border: 1px solid var(--metal-mid);
@@ -115,9 +128,15 @@ header nav a:hover { color: var(--accent-neon); }
     border: none;
     cursor: pointer;
     padding: 6px;
+    z-index: 101;
 }
-.nav-toggle span { width: 24px; height: 2px; background: var(--text-white); display: block; }
-
+.nav-toggle span { 
+    width: 24px; 
+    height: 2px; 
+    background: var(--text-white); 
+    display: block; 
+    transition: 0.3s ease; 
+}
 /* ============ Hero ============ */
 .hero {
     min-height: 100vh;
@@ -516,24 +535,41 @@ header nav a:hover { color: var(--accent-neon); }
 
 @media (max-width: 768px) {
     header { padding: 16px 20px; }
+    
     .nav-toggle { display: flex; }
-    header nav {
+    
+    .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-menu {
         position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: rgba(10, 10, 10, 0.97);
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 10px;
-        padding: 20px 0;
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        border-bottom: 1px solid var(--border-hairline);
+        gap: 40px;
+        transition: right 0.4s ease-in-out;
+        z-index: 100;
     }
-    header nav.open { transform: translateY(0); }
-    header nav a { margin: 8px 0; }
-    header .btn-outline { display: none; }
+
+    .nav-menu.active { right: 0; }
+
+    #primaryNav {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #primaryNav a { 
+        margin: 0; 
+        font-size: 1.5rem;
+    }
+
+    header .btn-outline { display: block; font-size: 1.1rem; padding: 12px 30px; }
 
     .services, .portfolio, .about, .faq { padding: 70px 24px; }
 }
